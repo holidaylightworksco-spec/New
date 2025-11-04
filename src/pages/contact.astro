@@ -1,0 +1,16 @@
+---
+import Base from "../layouts/BaseLayout.astro";
+---
+<Base title="Contact — Holiday Lightworks Co.">
+  <section class="section"><div class="container"><h1>Get a free design & quote</h1>
+    <form name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="/thank-you">
+      <input type="hidden" name="form-name" value="contact" />
+      <p hidden><label>Don’t fill this out if you’re human: <input name="bot-field" /></label></p>
+      <label>Name<input name="name" required /></label>
+      <label>Email<input name="email" type="email" required /></label>
+      <label>Phone<input name="phone" type="tel" required /></label>
+      <label>Address<input name="address" required /></label>
+      <label>Notes<textarea name="notes" rows="4"></textarea></label>
+      <button class="btn" type="submit">Send</button>
+    </form></div></section>
+</Base>

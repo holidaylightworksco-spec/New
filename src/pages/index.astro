@@ -1,0 +1,16 @@
+---
+import Base from "../layouts/BaseLayout.astro"; import Nav from "../components/Nav.astro"; import Hero from "../components/Hero.astro"; import BeforeAfter from "../components/BeforeAfter.astro";
+---
+<Base>
+  <Nav /><Hero />
+  <section class="section"><div class="container">
+    <h2>What We Do</h2>
+    <p>Premium holiday lighting design & installation for residential and commercial properties across Central Arkansas. No pricing on-site; every display is custom.</p>
+  </div></section>
+  <section class="section"><div class="container"><h2>Before / After</h2>
+      <BeforeAfter beforeSrc="/assets/before-1.webp" afterSrc="/assets/after-1.webp" alt="Before/After 1" position={60} />
+      <BeforeAfter beforeSrc="/assets/before-2.webp" afterSrc="/assets/after-2.webp" alt="Before/After 2" position={60} />
+      <BeforeAfter beforeSrc="/assets/before-3.webp" afterSrc="/assets/after-3.webp" alt="Before/After 3" position={60} />
+      <BeforeAfter beforeSrc="/assets/before-4.webp" afterSrc="/assets/after-4.webp" alt="Before/After 4" position={60} />
+  </div></section>
+</Base>

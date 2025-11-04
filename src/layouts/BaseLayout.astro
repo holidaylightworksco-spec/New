@@ -1,0 +1,13 @@
+---
+export interface Props { title?: string; description?: string; image?: string; url?: string; }
+const { title="Holiday Lightworks Co. — Custom Christmas Lighting", description="Premium residential & commercial Christmas lighting design, installation, maintenance, and storage in the Little Rock metro.", image="/assets/hero.webp", url="https://www.holidaylightworks.com" } = Astro.props as Props;
+import "../styles/global.css";
+---
+<!doctype html><html lang="en"><head><meta charset="utf-8"/><meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>{title}</title><meta name="description" content={description}/>
+<script type="application/ld+json">
+{JSON.stringify({"@context":"https://schema.org","@type":"LocalBusiness","name":"Holiday Lightworks Co.","image": image,"url": url,"telephone":"+1-501-553-8553","sameAs":["https://www.facebook.com/profile.php?id=61579104293870"],"description": description})}
+</script>
+</head><body><slot/>
+<div class="mobile-bar"><a class="btn outline" href="tel:+15015538553">(501) 553-8553</a><a class="btn" href="sms:+15015538553">Text Now</a></div>
+</body></html>

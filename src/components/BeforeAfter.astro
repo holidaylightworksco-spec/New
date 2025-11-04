@@ -1,0 +1,10 @@
+---
+export interface Props { beforeSrc: string; afterSrc: string; alt?: string; position?: number; }
+const { beforeSrc, afterSrc, alt = "Before and after lighting install", position = 55 } = Astro.props as Props;
+---
+<div class="before-after" style={`--pos: ${position}%;`}>
+  <img src={beforeSrc} alt={alt + " — before"} width="1600" height="1000" />
+  <div class="after"><img src={afterSrc} alt={alt + " — after"} width="1600" height="1000" /></div>
+  <input type="range" min="0" max="100" value={position} on:input={(e) => { const el = (e.target as HTMLInputElement); (e.currentTarget as HTMLElement).parentElement!.style.setProperty('--pos', el.value + '%'); }} />
+  <span class="handle"></span><span class="knob"></span>
+</div>
